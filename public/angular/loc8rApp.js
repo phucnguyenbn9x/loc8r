@@ -41,7 +41,6 @@ var locationListCtrl = function($scope, loc8rData, geolocation) {
         locations: response.data
       };
     }, function(response) {
-      console.log(response.statusText);
       $scope.message = "Sorry, something's gone wrong";
     });
   };
