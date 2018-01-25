@@ -72,13 +72,14 @@ var theEarth = (function() {
 module.exports.locationsListByDistance = function(req, res) {
   var lng = parseFloat(req.query.lng);
   var lat = parseFloat(req.query.lat);
+  var maxDistance = parseFloat(req.query.maxDistance);
   var point = {
     type: "Point",
     coordinates: [lng, lat]
   };
   var geoOptions = {
     spherical: true,
-    maxDistance: 20,
+    maxDistance: maxDistance,
     num: 10
   };
   if (!lng || !lat) {
