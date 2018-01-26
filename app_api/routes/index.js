@@ -13,8 +13,8 @@ var ctrlAuth = require('../controllers/authentication');
 // locations
 router.get('/locations', ctrlLocations.locationsListByDistance);
 router.post('/locations', ctrlLocations.locationsCreate);
-router.get('/locations/:locationid', auth, ctrlLocations.locationsReadOne);
-router.put('/locations/:locationid', ctrlLocations.locationsUpdateOne);
+router.get('/locations/:locationid', ctrlLocations.locationsReadOne);
+router.put('/locations/:locationid', auth, ctrlLocations.locationsUpdateOne);
 router.delete('/locations/:locationid', ctrlLocations.locationsDeleteOne);
 
 // reviews
