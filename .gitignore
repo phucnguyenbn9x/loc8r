@@ -1,5 +1,7 @@
-# Dependency directory
 node_modules
-
-# Environment variables
-.env
+package-lock.json
+bower_components
+/.idea/
+/public/
+.eslintrc.json
+/.vscode/
